@@ -17,7 +17,7 @@ function SwipeDeck()  {
             disableBottomSwipe = {true}
             onSwipedAll={() => {console.log('onSwipedAll')}}
             cardIndex={0}
-            backgroundColor={'#4FD0E9'}
+            backgroundColor={'transparent'}
             
             stackSize= {3}>
         </Swiper>
