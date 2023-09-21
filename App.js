@@ -1,22 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, Switch, SafeAreaView } from 'react-native'; 
 import SwipeDeck  from './components/SwipeDeck';
+import TeamSwitch from './components/TeamSwitch';
 
 export default function App() {
   return (
-  /*
-    <SafeAreaView style={{ flex:1, backgroundColor: 'black' }} >
-      <View style={styles.container}>
-        <View style={styles.swipeContainer}> 
-          <SwipeDeck/> 
-        </View>
-        <View style={styles.label}>
-          <Text style={styles.text}>Team:</Text>
-        </View>
-      </View>
-    </SafeAreaView>
-    */
-   
+
     <SafeAreaView style={{ flex:1, backgroundColor: 'black' }}>
       <View style={styles.scoreContainer}>
         <View style={styles.greenView}>
@@ -32,12 +21,12 @@ export default function App() {
         </View>
         <SwipeDeck/>
       </View>
+
+      <View style={styles.controlsContainer}>
+        <TeamSwitch/>
+      </View>
     </SafeAreaView>
-    
-    
-    
-    
-    
+        
   );
 }
 
@@ -55,6 +44,11 @@ const styles = StyleSheet.create({
   labelContainer: {
     flex: 1,
     backgroundColor: "red",
+  },
+  controlsContainer: {
+    flex: .7,
+    flexDirection: "column",
+    backgroundColor: '#fff',
   },
   text: {
     textAlign: "center",
@@ -74,7 +68,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#454545',
   },
   greenView: {
-    flex: 0.05,
+    flex: 0.1,
     backgroundColor: '#3bff4b',
     alignContent: "center",
     borderBottomLeftRadius: 50,
@@ -82,7 +76,7 @@ const styles = StyleSheet.create({
 
   },
   sideBySideViews: {
-    flex: .5,
+    flex: .85,
     flexDirection: 'row',
     justifyContent: "space-between"
   },
