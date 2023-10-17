@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, Switch, SafeAreaView } from 'react-native'; 
 import SwipeDeck  from './components/SwipeDeck';
 import TeamSwitch from './components/TeamSwitch';
+import Timer from './components/Timer';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
 
       <View style={styles.controlsContainer}>
         <TeamSwitch/>
+        <Timer/>
       </View>
     </SafeAreaView>
         
@@ -49,6 +51,9 @@ const styles = StyleSheet.create({
     flex: .7,
     flexDirection: "column",
     backgroundColor: '#fff',
+  },
+  timerContainter: {
+    
   },
   text: {
     textAlign: "center",
