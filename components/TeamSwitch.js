@@ -17,9 +17,11 @@ const TeamSwitch = () => {
             <View style={styles.switchTextContainer}>
                 <Text style={styles.switchText}>Team — </Text>
                 {isEnabled ? <Text style={styles.switchTextTeam}>😡</Text> : <Text style={styles.switchTextTeam}>😁</Text>}
-                
             </View>
-            <View style={styles.buffer}></View>
+
+            <View style={styles.scoreContainter}>
+                {isEnabled ? <Text style={styles.scoreText}>0</Text> : <Text style={styles.scoreText}>0</Text>}
+            </View>
             
         </View>
     )
@@ -42,6 +44,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         flex: 1,
     },
+    scoreContainter: {
+        flex: .15,
+    },
     switchTextTeam: {
         fontWeight: 'bold',
         fontSize: 30,
@@ -52,6 +57,12 @@ const styles = StyleSheet.create({
     },
     switchText: {
         fontSize: 30,
+    },
+    scoreText: {
+        fontSize: 30,
+        fontStyle: 'italic',
+        fontVariant: ["tabular-nums"],
+        textAlign: 'right',
     },
     buffer: {
         flex: .2
